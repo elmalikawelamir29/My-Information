@@ -22,6 +22,7 @@
     }
     h1 {
       color: #4b2e05;
+      margin-top: 12px;
     }
     a {
       display: block;
@@ -38,10 +39,27 @@
       border-top: 1px solid #ccc;
       padding-top: 15px;
     }
+
+    /* Logo styling */
+    .logo {
+      display: block;
+      margin: 0 auto 10px auto;
+      width: 180px;       /* غيّر القيمة لو عايز تكبر أو تصغّر */
+      height: auto;
+      border-radius: 8px; /* احذف لو مش عايز حواف مدورة */
+      object-fit: contain;
+    }
+
+    @media (max-width: 400px) {
+      .logo { width: 130px; }
+    }
   </style>
 </head>
 <body>
   <div class="card">
+    <!-- الصورة اللي اسمها woodcorner -->
+    <img src="woodcorner.png" alt="Wood Corner" class="logo">
+
     <h1>Wood Corner</h1>
     <p>📞 الهاتف: <a href="tel:01011977771">01011977771</a></p>
     <p>📧 الإيميل: <a href="mailto:info@woodcorner.net">info@woodcorner.net</a></p>
