@@ -4,77 +4,114 @@
   <meta charset="UTF-8">
   <title>Wood Corner</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+
     body {
-      font-family: "Cairo", Arial, sans-serif;
-      text-align: center;
+      font-family: "Cairo", sans-serif;
       direction: rtl;
-      background: #f2f2f2;
-      color: #333;
+      text-align: center;
+      margin: 0;
+      background: linear-gradient(135deg, #e7d6c4, #f5efe7);
+      color: #3e2f1c;
     }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
     .card {
       background: #fff;
-      margin: 40px auto;
-      padding: 30px;
-      border-radius: 15px;
+      border-radius: 20px;
+      border: 4px solid #b99470; /* إطار بلون خشبي */
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
       width: 90%;
       max-width: 600px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      padding: 30px;
+      position: relative;
+      overflow: hidden;
     }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 10px;
+      background: linear-gradient(90deg, #b99470, #d1b68f, #b99470);
+    }
+
+    .logo {
+      width: 180px;
+      height: auto;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      border: 2px solid #b99470;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
     h1 {
       color: #4b2e05;
-      margin-top: 12px;
+      font-size: 28px;
+      margin-bottom: 5px;
     }
-    a {
-      display: block;
-      margin: 12px 0;
-      color: #0077cc;
+
+    p, a {
       font-size: 18px;
+      color: #3e2f1c;
       text-decoration: none;
     }
+
     a:hover {
+      color: #b99470;
       text-decoration: underline;
     }
+
     .section {
-      margin-top: 25px;
-      border-top: 1px solid #ccc;
+      border-top: 1px solid #d9c5a1;
       padding-top: 15px;
+      margin-top: 20px;
     }
 
-    /* Logo styling */
-    .logo {
-      display: block;
-      margin: 0 auto 10px auto;
-      width: 180px;       /* غيّر القيمة لو عايز تكبر أو تصغّر */
-      height: auto;
-      border-radius: 8px; /* احذف لو مش عايز حواف مدورة */
-      object-fit: contain;
+    h3 {
+      margin-bottom: 10px;
+      color: #4b2e05;
     }
 
-    @media (max-width: 400px) {
-      .logo { width: 130px; }
+    footer {
+      margin-top: 15px;
+      font-size: 15px;
+      color: #7a6242;
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <!-- الصورة اللي اسمها woodcorner -->
-    <img src="woodcorner.png" alt="Wood Corner" class="logo">
+  <div class="container">
+    <div class="card">
+      <img src="woodcorner.png" alt="Wood Corner" class="logo">
+      <h1>Wood Corner</h1>
+      <p>📞 الهاتف: <a href="tel:01011977771">01011977771</a></p>
+      <p>📧 الإيميل: <a href="mailto:info@woodcorner.net">info@woodcorner.net</a></p>
 
-    <h1>Wood Corner</h1>
-    <p>📞 الهاتف: <a href="tel:01011977771">01011977771</a></p>
-    <p>📧 الإيميل: <a href="mailto:info@woodcorner.net">info@woodcorner.net</a></p>
+      <div class="section">
+        <h3>📱 السوشيال ميديا</h3>
+        <a href="https://www.facebook.com/woodcorner.net/" target="_blank">Facebook</a><br>
+        <a href="https://www.tiktok.com/@wood.corner85" target="_blank">TikTok</a><br>
+        <a href="https://www.instagram.com/wood_corner867?igsh=MTVnbDhvamMxMDdoaA==" target="_blank">Instagram</a>
+      </div>
 
-    <div class="section">
-      <h3>📱 السوشيال ميديا</h3>
-      <a href="https://www.facebook.com/woodcorner.net/" target="_blank">Facebook</a>
-      <a href="https://www.tiktok.com/@wood.corner85" target="_blank">TikTok</a>
-      <a href="https://www.instagram.com/wood_corner867?igsh=MTVnbDhvamMxMDdoaA==" target="_blank">Instagram</a>
-    </div>
+      <div class="section">
+        <h3>📍 الموقع الجغرافي</h3>
+        <a href="https://maps.app.goo.gl/BeGBJbKvQep6o4oo9?g_st=ipc" target="_blank">🏭 موقع المصنع</a><br>
+        <a href="https://maps.app.goo.gl/SrPKwtUhFpnVHM1KA?g_st=ipc" target="_blank">🏢 موقع المعرض</a>
+      </div>
 
-    <div class="section">
-      <h3>📍 الموقع الجغرافي</h3>
-      <a href="https://maps.app.goo.gl/BeGBJbKvQep6o4oo9?g_st=ipc" target="_blank">🏭 موقع المصنع</a>
-      <a href="https://maps.app.goo.gl/SrPKwtUhFpnVHM1KA?g_st=ipc" target="_blank">🏢 موقع المعرض</a>
+      <footer>
+        © 2025 Wood Corner – تصميم خاص
+      </footer>
     </div>
   </div>
 </body>
